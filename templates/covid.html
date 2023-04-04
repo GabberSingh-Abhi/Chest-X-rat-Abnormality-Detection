@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html style="width: 1256.33px">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+    <title>Covid Test result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/bootstrap/css/bootstrap.min.css') }}" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=ABeeZee"
+    />
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/fonts/font-awesome.min.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/fonts/simple-line-icons.min.css') }}" />
+   
+  </head>
+
+  <body>
+    <div class="row">
+      <div class="col">
+        <h1
+          class="mb-1"
+          style="
+            color: var(--cyan);
+            border-color: var(--primary);
+            font-size: 28px;
+            padding: 10px 20px;
+          "
+        >
+          § X-ray Abnormality Detection
+        </h1>
+      </div>
+    </div>
+    <div class="container" style="margin: 35px 25px">
+      <div class="row" style="background: #3929ed; margin: 0px 0px">
+        <div class="col-md-6 col-xl-8" style="text-align: left; height: 100%">
+          <h1
+            class="mb-1"
+            style="
+              color: var(--dark);
+              border-color: var(--primary);
+              font-size: 28px;
+              padding: 10px 20px;
+            "
+          >
+            Your X-ray image :
+          </h1>
+          <img width="500" height="500" src="{{ url_for('static', filename='image/') }}/{{xray_image}}" />
+        </div>
+        <div class="col-md-6 col-xl-4">
+          <h1
+            class="mb-1"
+            style="
+              color: var(--cyan);
+              border-color: var(--primary);
+              font-size: 28px;
+              padding: 10px 20px;
+            "
+          >
+            Predicted Result
+          </h1>
+          {% if prediction[0]=='covid' %}
+          <center><p>Covid Posetive</p></center>
+          {% elif prediction[0]!='covid' %}
+          <center><p>Covid Negative</p></center>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <h1
+          class="mb-1"
+          style="
+            color: var(--dark);
+            border-color: var(--primary);
+            font-size: 28px;
+            padding: 10px 45px;
+          "
+        >
+          <strong>What to do next?</strong><br />
+        </h1>
+      </div>
+    </div>
+    <div class="container" style="margin: 0px 35px">
+      <div class="row">
+        <div class="col-md-6 col-xl-7">
+          <span
+            >The COVID-19 virus spreads primarily through droplets of saliva or discharge from the nose when an infected person coughs or sneezes, so it’s
+            important that you also practice respiratory etiquette (for example, by
+            coughing into a flexed elbow).
+            At this time, there are no specific vaccines or treatments for COVID19. However, there are many ongoing clinical trials evaluating potential
+            treatments. WHO will continue to provide updated information as soon
+            as clinical findings become available</span
+          >
+        </div>
+        <div class="col-md-6 col-xl-5">
+          <img style="width:100%" src="https://rural.nic.in/sites/default/files/2_Protective%20Measures_English.jpg" />
+        </div>
+      </div>
+    </div>
+    <img />
+    <script src="{{ url_for('static', filename='assets/js/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/bootstrap/js/bootstrap.min.js') }}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <script src="{{ url_for('static', filename='assets/js/stylish-portfolio.js') }}"></script>
+  </body>
+</html>

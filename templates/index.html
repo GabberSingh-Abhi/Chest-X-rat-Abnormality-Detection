@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+    <title>Major Project</title>
+    <!-- CSS only -->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='assets/bootstrap/css/bootstrap.min.css') }}" /> -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=ABeeZee"
+    />
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/fonts/font-awesome.min.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/fonts/simple-line-icons.min.css') }}" />
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  </head>
+  <style>
+
+  </style>
+
+  <body id="page-top">
+
+    <nav class="navbar bg-dark navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Homepage</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#"></a>
+            </li>
+            <li class="nav-item">
+            </li>
+            
+            
+            
+          </ul>
+          <a class="nav-link" href="#portfolio">Symptom Checker</a>
+          
+        </div>
+      </div>
+    </nav>
+    
+    <header class="d-flex masthead" style="padding: 60px 0px; background:url('https://content.jdmagicbox.com/comp/def_content/x-ray-centres/6-x-ray-centres-6-w2b3g.jpg?clr=#202046?fit=around%7C270%3A130&crop=270%3A130%3B%2A%2C%2A'); background-size:cover;">
+      <div class="container text-center my-auto" style="padding: 0 45px; ">
+        <h1
+          class="mb-1"
+          style="color: var(--cyan); border-color: var(--primary)"
+        >
+          
+        </h1>
+        <h3 class="mb-5">
+          <em style="color: #000000; font-size: 42px; text-align: center"
+            >Welcome to Chest X-ray <br />Abnormality Detection<br>Homepage</em
+          >
+        </h3>
+        
+        <div class="overlay"></div>
+      </div>
+
+
+      <div class="col-xl-6">
+        <lottie-player
+          src="https://assets1.lottiefiles.com/packages/lf20_lt3hhrbi.json"
+          background="transparent"
+          speed="2"
+          style="width: 500px; height: 500px"
+          loop
+          autoplay
+        ></lottie-player>
+      </div>
+    </header>
+
+    <section id="portfolio" class="content-section pt-10 pb-5 mx-auto " style = "background-color: #5fa8f2;">
+      <div class="container" >
+        <!-- <div class="text-center content-section-heading pt-5"> -->
+          <h2 style="text-align: center;">Get Started!</h2>
+        <!-- </div> -->
+        <center>
+        <div class="row no-gutters">
+          <div
+          class="col-lg-12"
+          style="
+            border: 2px solid white;
+            border-radius: 20px;
+            padding-top: 100px;
+            padding-bottom: 100px;
+            padding-right:20px;
+            color: whitesmoke;
+            
+          "
+        >
+        
+        
+        
+
+            <div class="caption">
+              <div class="caption-content">
+                <h2 >OVERALL DETECTION</h2>
+                <form action="/overall" method=post enctype=multipart/form-data>
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <span class="form-label">Name</span>
+                        <input class="form-control" type="text" name="name" placeholder="Enter your name:">
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <span class="form-label">Email</span>
+                        <input class="form-control" type="email" name="email" placeholder="Enter your email:">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <span class="form-label">Contact No:</span>
+                        <input class="form-control" type="text" name="phone" placeholder="Enter your Contact Number:">
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <span class="form-label">Age</span>
+                        <input class="form-control" type="text" name="age" placeholder="Enter your Age:">
+                      </div>
+                    </div>
+                  </div>
+                  
+                 
+                  <div class="form-group">
+                    <span class="form-label">Address</span>
+                    <input class="form-control" type="text" placeholder="Enter Address">
+                  </div>
+                  <div class="form-group">
+                    <br>
+                    <p class="mb-0">
+                      Please Upload your X-ray image and click on predict
+                    </p>
+                  <input
+                  type="file"
+                  name="file" class="form-control"
+                  style="background: var(--cyan); border-radius: 10px"
+                  />
+                  <br>
+                  <input type=submit value=Predict
+                  class="btn btn-dark btn-xl js-scroll-trigger"
+                  role="button"
+                  href="#services"
+                  style="padding: 7px 20px;border-radius: 20px; margin-left: 10px;"
+                  value = "Predict"/>
+              </form>
+                </div>
+              </div>
+            </div>
+        </div>
+          
+          <div class="col-lg-6"><a class="portfolio-item" href="#"></a></div>
+          <div class="col-lg-6"><a class="portfolio-item" href="#"></a></div>
+        </div>
+      </div>
+    </center>
+    </section>
+   
+
+
+    <section
+      class="bg-light content-section"
+      id="about"
+      style="padding: 80px 0"
+    >
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-10 mx-auto">
+            <h2 style="font-size: 42px; text-align:center;">Why do we need this? </h2>
+            <p class="lead mb-5" style="font-family:'Comic Sans MS','Comic Sans',cursive";>
+              <span
+                >When you have a broken arm, radiologists help save the day—and
+                the bone. These doctors diagnose and treat medical conditions
+                using imaging techniques like CT and PET scans, MRIs, and, of
+                course, X-rays. <br />
+                Yet, as it happens when working with such a wide variety of
+                medical tools, radiologists face many daily challenges, perhaps
+                the most difficult being the chest radiograph. <br />The wrong
+                interpretation of chest X-rays can lead to a medical
+                misdiagnosis, even for the best practicing doctor.
+                <br />Computer-aided detection and diagnosis systems (CADe/CADx)
+                would help reduce the pressure on doctors at metropolitan
+                hospitals and improve diagnostic quality in rural areas.
+              </span>
+            </p>
+          </div>
+        </div>
+        <div class="row ">
+           <div class="col-3 mx-auto" style="
+            border-radius: 10px;
+            padding-top: 100px;
+            padding-bottom: 100px;
+            background-position: center;
+            background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8McuWA1vt0n3CFHSdTbQUzFRbVpqE1bSkvw&usqp=CAU');"></div>
+            <div class="col-3 mx-auto" style="
+            border-radius: 10px;
+            padding-top: 100px;
+            padding-bottom: 100px;
+            background-position: center;
+            background: url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxISEhITEBIQFRUVFRUVFQ8VEA8QFRUVFRUWFhUSFRUYHSggGBolGxUVITEhJSkrLi4uFx8zODMtNygtLisBCgoKDg0OFQ8QGCsZFxkrKysrLSsrLSsrKy0tLSstLSsrLSsrLSsrNy0rNy0tKzcrKys3KystLSstKysrKysrK//AABEIAOEA4QMBIgACEQEDEQH/xAAbAAACAwEBAQAAAAAAAAAAAAAEBQACAwEGB//EADYQAAICAQIEAwQIBwEBAAAAAAABAgMRBCEFEjFRQWFxBhMikRQygZKhseHwFlJTYsHR8UKi/8QAGgEAAgMBAQAAAAAAAAAAAAAAAwQAAQIFBv/EACARAAMBAQACAwEBAQAAAAAAAAABAgMREhMEFCExMiL/2gAMAwEAAhEDEQA/APn2v9s73J8iilnxWQb+L9T3j91Cm+HxP1M+U7QMc/xdqe8fuk/i7Ud4/dEvIT3T7FMg5/i/Uf2fdJ/F+o/s+Qnjpmy70jBsscR9r9R/Z8g/Te2Go/s+R5aFIy0tJt/5A6/w9Zp/bC/tD5MLh7Y39ofJnntNQG10I5fyv4JZf7Hum9rr3KKcYYyvB/7PSx9pH/KvxPD6ejc9BXWcejpSPqvaDP8A5Ca+M5/8nn66hnTWgFBpDXxnfGCr4v5fmB2UpMs6+xlBUb28Yx4AkuP/ANpnqIbfoLZ1G0EQyl7S4T+H8xdqPbCfhBfiD3VbMXT05mjFh0/bS3+SH/1/szfttb/JD5yF0tIZy0IzkJaDVe29v9OPzYx4f7VTti1BQVufhqk3FWLHSE845uuzxk8rLR4NdDN0zc4Ri5crUW1nkbWOePmt+vcMwSG8/bW5Np1RTTw4tyTTXVNHV7cW/wBOPzYJPh9fuE1mTk38TUeZza+tzZ5kk1unnKa2+JSS5cNfcEwiHy9urP6cfvMvH28s/pR+8zzlnDpLwfyZj9Dl2fyYM2er/jl/0l95kPKfRJdiFkPJ6iPxP1O06dsMlRmT9RhptKev8kA9gJRpV4oKjp15fIMjQuxvChMvqZtX0BhTHxS+xFLNP23X76jGWmZRUlODfRX9AUunXt/o3p0mA2FeHv8AMZUVKXn+aKr8XAOr/APTUhcKg5cP8YnIUPODmfIXUJQ+WZ1wHGlXwoGq0wx0sNjl1A9Nl4wDdOYxRrUxeoDTZrdHoRQ7FbztK26sE5DKzLURQI6vIPtMJyS6srrQRUL7agK2obznHwYPLlfiamfJg9LFEoHHAZT05avQ99kO5ZiOlihUt+BvXw7xlt5eI2dcYrt+ZhKzPRY8/FhbjgOaBfceCwl38SRil0+ZvyGkKRW/wZkGks9TN1LxyMJU49TF09wPQvAXEfMgTyLsvxITpOHjbNHiQXTp9g7V0fGzeNGEl5HpvYcf2C9UG0ag1UFoUhJsJGgPXVlbg11GGNIwwzO6GfAYmhqLAatOvEvVU4yCqnFFm8voZtmNGHaKeevUKu08evR/mLveqtZf/TJa5y+sJarqE3+M2s1DW2MEhq8eKz6kaTBbqd9mI1AebCnq5eDYZodW87ieGUFaee++wvUB5sfW2+hNPN/tgNtmyNNLaBcBVYdqbeWOTz9lkpNt/Iba2Wwisk302QN5m1Za67G/4FPil028y0K14hMsINlmC0sto5OPV5GH0uL6Pf8AfQR26jqZV2eJ0M8xLSx1NZe5emqLezB9Nbzrfr+9zSKwyayTOgh1eRtVVjr4FK7u5qmczb8OhkD2xyDTDpoEuW4p0a4Z48iFsEJ0nBZfXmx+uTSMcm+qrw35v8PA7VA7fsOP6zldZo6jb6q8/wAjPA1lfQNLxZhOIJqdlj5h84gd8RyGHzoEigquOFllaazHiN+NkXTNWzHVXZMI2mcln7TkUAoWsNq1TNpXZAYTXc3jNCtouGE1z7oOpimgGh58w2hClsahG1myRvp98HXBY3NtPFAl+hDDWSW4mlN/qNNc+oruS8WbUdMuuGasfh17ksvbXmZysS8wPUansNZZC2mhr71mfvmgSeoKq9D0ZmZjo84dq8NfvI+6rKPGUWbnp+HX5iVpl0uocvqDYsJhLZAkWbxexzdvjhctuGsmDzWd0dtZhGzDyJ/WG/sFuU6W97HzIT6xXvMNd9dnalhZf2Ivqo/GzCVmX5LoV7C/WXzksolYI2UR3DQU2gpbABuiM7Igdkdzp5sDmwaT5Yt/vIo1D3y/mMuITxt+8ia+WQjC0yjt7FJZOJYOuwEwFFoxYVW0CKw0hJ+QvoiQH17MP00n4CmN2PAP0NqbENGO5jzOxamW5VPZF4mI/TV/gp4jNtsVWsY8RmlkTTuHIjopdHLXkCtNbrWA2WvuPZwZievpLHgGtsZS3UGfvcjaSS6x7OA/SanB6XhWo3XmeSqWRtw69xaXyL4qNXn09fGwKhYK42G9dwveYneQXdIFsmUldnowW6wB6UC5QZzkF/vThPSieNDjilmJNd+oJTLctxGXxt+ZjRNbnE9R0vYHxngt9JQu1GpwvNmGmnvv4jmGYptoPPe5MJvqytcuhXVSxF/vqdPNAc0J9fPLF10wjWWeAC0EoJRSTZIpmuEcyBpgKZaMTatox5jqbFdKN5yGQwwzSQ3QrhJh2lt3Rz9GO5o9LD6qCaa9twbSvohhExF8N1PRZq9LF5yl8jzvEdKoPK6dj1mpR5XjV2Xyp+Y1G/Besei26rKyAW6cYLODGUdtx/LdMByoYnu0oL7prwHU6zF1odnRNfoznsB0NobaKGcA9emGPD6uWSN+SX8CVqh/TXsctjsGaSr4UU1MAVWL3oKnJxefwNHJS6GOs7GOisw8P1QPyBeYX7shp70hfkTzCeJv4mI79Zyz8vEbcWniTPLamzLOf6i/YNq9RzvPyCVIR6G/DwNFYMZxwG35MdaOzOCvFLMRBuGWb4JxaWVj7RqEHiRQ3ncwsnjY7fbjbuYQ3JZLO5yawR2FZbIro+C6XWawrNoVoHjYzSMmIXQ1EhKqCtHR8S9QWEHgL0TbkkKWxqEegrhsgyCB6fAKF3XA6noJxPo8Hlr9O85aPScTt2E1lncryoIsugao65Rhdp0Ht4WcAErMvr89wsbOf6B1+P0FnQDzpD3E5yL1Oll8s59/Ha/gNRXga6alA0KQzTPDQz9hME4sf6Cv4UYa9YDNAtvkAcaljYv3dMOGJbnnLFWpv5ZJoO1VmExNLd5ZPYV4MK+my7kBOUhPYTwY/wDaG7DfmzzyQw41dz2y7JgcUTyJ4mMlh5GemsykL5oJ0LCyyS+Drh3U14j1+wz0KL8V/wAJDEsYihBdDLbLQhg2a2M0jGlGNKLpl1AkIG8PQ5m+prHPpSNL7BEKcMjl/wANIS/fU59aj05hWnoyG6LTpSBNJOT9A7RybkBqwqgbovzGUmRyBpdGYkB4tuhHfNpdB1xKWx57V27MYmRqILwsymgCUt/1KR1Xgys9Rv0RKgu8wuDOpY6GFd6NlZkDxz/BS8jeEgmqADFjHRy/QJOzQrWI94Y8p+mBZxp/F6DHhu2RdxVfEw87AKyPNa9gUUGa5bg0UF9oP1FOUhfBCe0nrK2vLb7s4kWl1ODPkL+JSaNdF1M5I00fUPnQK1wf6NdC3FVsTQ+Bbi+0U/J/4GZZqaEUnl47BVdYLTEKjPALauIr/VF3DBVF4G3u8dTh/I06+HUwzM4IJojlmCmvI3psfRCvGOeA2VUUtjTTJReULrL2lg34bbzP0JwvxG05Z7nOYkkUkwsSGzkB4o8x2POauLZ6LWPYRat7MbiRxf8AK6Jq3vh/MrdI4niT69y7WTTkipMzjYE1Wgnuu2C8coFUGaz6NarEE13YEsbsBNWoyArMXrI9jw/UZ5fP/RlxJC3hN/xJdmvxDtdME00L1med1y3BooI4hPcHjMvzYL1kwQ5zkJ5snrKy6nDsupDp9OZwpItpnuckcp+sHzYHRHodDLoa8dfwL1/UG0hpx6XwR+3/AAOyCkURn4GsYgFEtxjUC2nqNJ8o2rlgtOWTLmLJnG3y/enTw1JGIZTW9jOqGQlMW5Q37TlteFt4jPhGnxgBe7iPNB02J40V7TayowlUGnHUXNNPjD56iTW1bCXUUnqdVRsJtRUNRoOTapcZ5i7S9SfR8jmygEso7BHZpKULp1Io6wqcTPODLsvyQLKlmlUMBVcC3uwF2A00DuEQ+NeY511Qq4VLEl6r8xxxGQNJ2/wS024eV18VzGKii2ul8RkpBPrsW+yW5UQpzEJ9dk+yWkcLSODPRbhVlI9TRmXiM5MX0Q70UzvtBLaP2mGil0+wvxh5x6f5Y9ACf6KKljcLVoLnBISNUul0gyNgRVNAMJdzZ2YFNMemo04MHf4I65tAVL/6E836C/1w/vGGlXfxHeiWBJoHkfadYRXoL9wWsm9YLk1pkLa4DGexfUU7CTVUbsfzewBdFPqKtVI7GwjlUB31Di2AFqKy/YH9ootp8QWVfgxtKOAW+svzNewAhDAQuhRwKxkUk7fBbbTgToZfHH1X5jjikxJpvrJhvG78I6vx/jnI11bfEee1dmZsqpgFl/xM6rh70ID40G85AD3x0noRPGhtI4WZw4vR/hVmckaspJB86A6SGaB7r1DOIQzy+n+xdo5bja+OYp9v8j0aCjlpiK2O+C1dZrdHdkrCPQr9Zf3SS3KKPcJpolP07jjR8Nit8faDepahsV0aeT6JhcOHzfYfV0I3hSY9hfgKNPopRwN9MW92bVQJ5F+JpE0rRxI0gB0YWEXaANTU/AZIytiJaDcCO2qXYEmn4pofzrMuTvuK0MyeYvfcFlZ4HrNRoISXReon1XC8GEFQlnEwnAaWaNpAEkGyrjA7T020kMtFeORzn7Qrh0PwBuLPqdfHfhy9M2n1HkvcbsuqA6MC3IN/YRjysW+4IMeQhfvRPKwlkOshwOnS4VKtFzmDc0YcndP1HmmXNFryEMNmOtDPoGnXgKsxbZHd+rDNNoubfsbarS5nleO4fp4YSSNPYpZF9LpksDKqorpqRhXUDeptZGcKzaNZooncFzoVUFVBHeUtg40MTQCpLKJZRORiWSM2zUIsjrREjuBK2NwYyRRwRpYiqiLMYRX3WwPdWHYMZowEQmupFOv0iW6+09JfAW62tNMsjnoDoq8QbE/E2N9Rdyxwee12p3CzdIG8OmEYFuUorjvvzfusz9Y7yEK++IT3WT6xqyEZCjJCEIWUVkg/QWgMi2lswzRk9JBcyQXp6twDRS6DSHUploYU7BEWB1MIjIyzSN0yxnEugkA7O4IQjG4FrLI7grBlsksqDSJGcTO5E7G4OTRyKLMqxdh0ckYyLykYykYNoxuYr1chjdIU6yWz+02giEnELTz1sstjPitoqQRBUQhCGjZwhCEIMWQhCjmEIQhZRxlIdUQhoyz0+g8BrHwOkKZaCawiJCGWaRrEuiECQDs6cIQbgWstEsyEJZUF4EZ0gnY3BxlWQguw6Mpg8iEMG0DXivWdCENoIjyXGOqF6OkNoKjhCENmzhCEIQ//2Q==');"></div>
+            <div class="col-3 mx-auto" style="
+            border-radius: 10px;
+            padding-top: 100px;
+            padding-bottom: 100px;
+            background-size: cover;
+            background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStVLTYYeY-7xs6c469bwQiV9iQeZdHD5pA4w&usqp=CAU');"></div>
+          </div>
+      </div>
+    </section>
+    
+    
+    <!-- JavaScript Bundle with Popper -->
+
+    <script src="{{ url_for('static', filename='assets/js/jquery.min.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <!-- <script src="{{ url_for('static', filename='assets/bootstrap/js/bootstrap.min.js') }}"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <script src="{{ url_for('static', filename='assets/js/stylish-portfolio.js') }}"></script>
+  </body>
+</html>
